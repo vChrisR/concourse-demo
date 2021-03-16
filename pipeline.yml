@@ -1,0 +1,16 @@
+resources:
+- name: task-repo
+  type: git
+  source:
+    uri: https://github.com/vChrisR/concourse-demo.git
+
+jobs:
+- name: greeting
+  plan:
+  - get: task-repo
+    trigger: true
+  - task: greet
+    file: task-repo/tasks/greeting/task.yml
+    params:
+      GREETING: "hello world"
+
