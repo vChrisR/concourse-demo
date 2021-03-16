@@ -7,10 +7,10 @@ image_resource:
     repository: ubuntu:18.04
 
 inputs:
-  - name: task-repo
+- name: task-repo
 
 params:
   GREETING:
 
 run:
-  path:k-repo/tasks/greeting/task.sh
+  path: task-repo/tasks/greeting/task.sh
